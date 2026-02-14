@@ -62,7 +62,7 @@ class WhoopAPI {
      * This opens a popup window for Whoop authentication
      */
     startAuthentication() {
-        const clientId = 'YOUR_WHOOP_CLIENT_ID'; // Replace with your Whoop API client ID
+        const clientId = '501d371f-6939-4b75-b9db-57069c551cfb'; // Whoop API client ID
         const redirectUri = encodeURIComponent(window.location.origin + '/whoop-callback.html');
         const scope = encodeURIComponent('read:recovery read:sleep read:workout read:profile');
         
@@ -95,8 +95,8 @@ class WhoopAPI {
      * @param {string} code - The auth code from redirect
      */
     async exchangeCodeForToken(code) {
-        const clientId = 'YOUR_WHOOP_CLIENT_ID'; // Replace with your Whoop API client ID
-        const clientSecret = 'YOUR_WHOOP_CLIENT_SECRET'; // Replace with your Whoop API client secret
+        const clientId = '501d371f-6939-4b75-b9db-57069c551cfb'; // Whoop API client ID
+        const clientSecret = 'f3486b8ef19c943c0cfafbb020fefaa909dea13ef104b96cf8ea0dc643f2d536'; // Whoop API client secret
         const redirectUri = window.location.origin + '/whoop-callback.html';
         
         const response = await fetch(`${this.baseUrl}/oauth/token`, {
@@ -131,8 +131,8 @@ class WhoopAPI {
             throw new Error('No refresh token available');
         }
         
-        const clientId = 'YOUR_WHOOP_CLIENT_ID';
-        const clientSecret = 'YOUR_WHOOP_CLIENT_SECRET';
+        const clientId = '501d371f-6939-4b75-b9db-57069c551cfb';
+        const clientSecret = 'f3486b8ef19c943c0cfafbb020fefaa909dea13ef104b96cf8ea0dc643f2d536';
         
         const response = await fetch(`${this.baseUrl}/oauth/token`, {
             method: 'POST',
