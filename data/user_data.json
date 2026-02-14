@@ -1,0 +1,182 @@
+{
+  "user": {
+    "height": 194.5,
+    "weight": 99,
+    "age": 39,
+    "target_weight": "105-107"
+  },
+  "current_phase": "Pre-HT",
+  "next_phase": "Heilung 1",
+  "timeline": [
+    {
+      "phase": "Pre-HT",
+      "timeframe": {
+        "start": "2026-02-14",
+        "end": "2026-02-20"
+      },
+      "strategy": "Finale Push-Woche mit maximaler Intensität (0-1 RIR) für Kernübungen",
+      "focus": "Brust-Drücken, Schulter-Pressing, Delts-Breite, Waden, Unterarme",
+      "recovery": "Auto-Regulation basierend auf Whoop (High: Top-Sets 0-1 RIR, Low: Volumen mit 2-3 RIR)"
+    },
+    {
+      "phase": "Heilung 1",
+      "timeframe": {
+        "start": "2026-02-21",
+        "end": "2026-03-06"
+      },
+      "strategy": "Absolute Ruhe / Spazierengehen",
+      "focus": "Keine Belastung, kein Schwitzen (Graft-Protection)",
+      "recovery": "Ernährungsanpassung für Gewichtserhaltung ohne Training"
+    },
+    {
+      "phase": "Heilung 2",
+      "timeframe": {
+        "start": "2026-03-07",
+        "end": "2026-03-20"
+      },
+      "strategy": "LISS Cardio (Puls < 120)",
+      "focus": "Kein Krafttraining, kein Kopf-Druck (Pressatmung vermeiden)",
+      "recovery": "Stoffwechselaktivierung ohne Gefährdung der Transplantate"
+    },
+    {
+      "phase": "Blast-Start",
+      "timeframe": {
+        "start": "2026-03-21",
+        "end": "2026-04-17"
+      },
+      "strategy": "Moderater Wiedereinstieg (RPE 6-7)",
+      "focus": "Progressive Belastungssteigerung, Fokus auf Technik",
+      "recovery": "Start Test E (500mg/W) + Primo (600mg/W) + HGH (2 IU → 3 IU)"
+    },
+    {
+      "phase": "Peak-Blast",
+      "timeframe": {
+        "start": "2026-04-18",
+        "end": "2026-07-11"
+      },
+      "strategy": "Maximale Intensität (RPE 9-10)",
+      "focus": "Volle Ausbelastung, hohes Volumen, Push-Pull-Legs ohne Deload",
+      "recovery": "Volle Dosierungen, HGH (4 IU täglich)"
+    }
+  ],
+  "performance": {
+    "current": {
+      "flat_bench": "3×10 @ 60kg",
+      "incline_press": "3×10 @ 32.5kg",
+      "shoulder_press": "3×8-10 @ 20kg",
+      "lat_pulldown": "3×8 @ 70kg",
+      "chest_supported_row": "3×11 @ 57kg",
+      "leg_extension": "3×10 @ 50kg"
+    },
+    "targets": {
+      "flat_bench": "3×8 @ 100kg",
+      "incline_press": "3×8 @ 45kg",
+      "shoulder_press": "3×8 @ 35kg",
+      "lat_pulldown": "3×8 @ 90kg",
+      "chest_supported_row": "3×10 @ 75kg",
+      "leg_extension": "3×10 @ 75kg"
+    },
+    "pr_targets": {
+      "bench_press": "100kg × 8",
+      "shoulder_press": "35kg × 8",
+      "lat_pulldown": "90kg × 8",
+      "leg_press": "300kg × 10",
+      "standing_calf_raise": "150kg × 12"
+    }
+  },
+  "proportions": {
+    "chest": {
+      "current": "Schwach",
+      "target": "Mittel-Stark",
+      "progress": 40
+    },
+    "shoulders": {
+      "current": "Schwach",
+      "target": "Stark",
+      "progress": 35
+    },
+    "calves": {
+      "current": "Schwach",
+      "target": "Mittel",
+      "progress": 30
+    },
+    "forearms": {
+      "current": "Schwach",
+      "target": "Mittel-Stark",
+      "progress": 30
+    },
+    "back_pull": {
+      "current": "Stark",
+      "target": "Sehr Stark",
+      "progress": 80
+    },
+    "hamstrings": {
+      "current": "Stark",
+      "target": "Sehr Stark",
+      "progress": 85
+    }
+  },
+  "next_workout": {
+    "day": "TAG 1: PUSH - BRUST",
+    "date": "2026-02-14",
+    "focus": "Brust & Schultern",
+    "pr_attempts": [
+      {
+        "exercise": "Bench Press",
+        "sets": "4×6-8",
+        "weight": "65-67.5kg"
+      },
+      {
+        "exercise": "Incline Machine",
+        "sets": "3×8-10",
+        "weight": "35kg"
+      }
+    ]
+  },
+  "recovery": {
+    "current": 75,
+    "trend": "+15%",
+    "rhr": {
+      "value": 52,
+      "trend": "-2 bpm"
+    },
+    "hrv": {
+      "value": 68,
+      "trend": "+4 ms"
+    },
+    "weekly_data": [82, 65, 48, 73, 80, 60, 75]
+  },
+  "cycle_plan": {
+    "status": "Vorbereitung",
+    "start": "2026-03-21",
+    "duration_weeks": 16,
+    "injection_schedule": {
+      "monday": ["Test E", "Primo"],
+      "wednesday": ["Primo"],
+      "thursday": ["Test E"],
+      "friday": ["Primo"]
+    },
+    "bloodtest": {
+      "start": "2026-04-15",
+      "end": "2026-04-20"
+    }
+  },
+  "important_dates": [
+    {
+      "date": "2026-02-21",
+      "event": "Haartransplantation"
+    },
+    {
+      "date": "2026-03-07",
+      "event": "Start LISS Cardio"
+    },
+    {
+      "date": "2026-03-21",
+      "event": "Beast Cycle Start"
+    },
+    {
+      "date": "2026-04-15",
+      "event": "Bluttest-Fenster öffnet"
+    }
+  ]
+}

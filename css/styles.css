@@ -1,0 +1,376 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+h1, h2, h3, h4 {
+    color: #2c3e50;
+}
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.user-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.progress-section {
+    margin-bottom: 20px;
+}
+
+.progress-bar-container {
+    height: 25px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    width: 0;
+    transition: width 1s;
+    position: relative;
+}
+
+.progress-label {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8px;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(to bottom, #3498db, #e74c3c);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 10px 0 20px 30px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #3498db;
+    border: 4px solid white;
+}
+
+.timeline-marker.current {
+    background-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.6);
+}
+
+.timeline-marker.future {
+    background-color: #95a5a6;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-content h4 {
+    margin-top: 0;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 5px;
+}
+
+.phase-heilung1 { background-color: #d5f5e3; border-left: 5px solid #27ae60; }
+.phase-heilung2 { background-color: #d6eaf8; border-left: 5px solid #3498db; }
+.phase-blaststart { background-color: #fcf3cf; border-left: 5px solid #f1c40f; }
+.phase-peakblast { background-color: #fadbd8; border-left: 5px solid #e74c3c; }
+
+.muscle-progress {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.muscle-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    width: calc(33% - 10px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.muscle-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.muscle-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.current {
+    color: #3498db;
+}
+
+.target {
+    color: #e74c3c;
+}
+
+.mini-progress {
+    height: 5px;
+    background-color: #ecf0f1;
+    border-radius: 2px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.mini-progress-bar {
+    height: 100%;
+    border-radius: 2px;
+    background-color: #3498db;
+}
+
+.date-marker {
+    position: absolute;
+    bottom: -25px;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.upcoming-block {
+    background-color: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 5px solid #3498db;
+}
+
+.upcoming-block h4 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+.recovery-chart {
+    height: 100px;
+    max-width: 100%;
+    margin: 15px 0;
+    position: relative;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.recovery-bar {
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    border-radius: 3px 3px 0 0;
+    background-color: #3498db;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ecf0f1;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+.value-up { color: #27ae60; }
+.value-down { color: #e74c3c; }
+.value-same { color: #7f8c8d; }
+
+.hormone-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.injection-schedule {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.day-box {
+    text-align: center;
+    width: 13%;
+    padding: 5px 0;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.active-day {
+    background-color: #d6eaf8;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+.calendar-box {
+    margin-top: 15px;
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px 0;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.calendar-day.today {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.event {
+    background-color: #3498db;
+    color: white;
+}
+
+.target-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.target-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.target-list li:last-child {
+    border-bottom: none;
+}
+
+.target-exercise {
+    font-weight: bold;
+}
+
+.target-value {
+    color: #e74c3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-stats {
+        flex-direction: column;
+    }
+    
+    .stat-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .muscle-item {
+        width: 100%;
+    }
+}

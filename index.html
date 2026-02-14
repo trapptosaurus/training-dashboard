@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL AI TRAINING OS - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>PERSONAL AI TRAINING OS - Langzeit-Dashboard</h1>
+    
+    <div class="dashboard-grid" id="main-content">
+        <div class="main-content">
+            <div class="card">
+                <h2>Trainingsfortschritt & Zeitplan</h2>
+                <div class="user-stats">
+                    <div class="stat-box">
+                        <div class="stat-label">Aktuelles Gewicht</div>
+                        <div class="stat-value" id="current-weight">99 kg</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Zielgewicht (Peak)</div>
+                        <div class="stat-value" id="target-weight">105-107 kg</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Phase</div>
+                        <div class="stat-value" id="current-phase">Pre-HT</div>
+                    </div>
+                </div>
+                
+                <div class="progress-section">
+                    <h3>Cycle-Fortschritt</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="cycle-progress-bar" style="width: 0%;">
+                            <div class="progress-label" id="cycle-progress-label">0%</div>
+                        </div>
+                        <div class="date-marker" style="left: 0%">21.03.2026<br>Start</div>
+                        <div class="date-marker" style="left: 25%">18.04.2026<br>Peak</div>
+                        <div class="date-marker" style="left: 100%">11.07.2026<br>Ende</div>
+                    </div>
+                </div>
+                
+                <div class="timeline" id="timeline-container">
+                    <!-- Timeline items will be inserted here by JS -->
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Übungsfortschritte & Ziele</h2>
+                <p>Aktuelle Leistung und Zielwerte für die Kernübungen nach Beast Cycle (11.07.2026)</p>
+                <div class="muscle-progress" id="exercise-progress">
+                    <!-- Exercise progress items will be inserted here by JS -->
+                </div>
+                
+                <h3 style="margin-top: 20px;">Proportions-Schwerpunkte</h3>
+                <div class="muscle-progress" id="proportions-progress">
+                    <!-- Proportions progress items will be inserted here by JS -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="card">
+                <h3>Nächste Trainingseinheit</h3>
+                <div class="upcoming-block">
+                    <h4 id="next-workout-day">TAG 1: PUSH - BRUST</h4>
+                    <p><strong>Datum:</strong> <span id="next-workout-date">14.02.2026</span></p>
+                    <p><strong>Fokus:</strong> <span id="next-workout-focus">Brust & Schultern</span></p>
+                    <p><strong>PR-Versuche:</strong></p>
+                    <ul id="pr-attempts">
+                        <!-- PR attempts will be inserted here by JS -->
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Recovery-Status</h3>
+                <div class="recovery-chart" id="recovery-chart">
+                    <!-- Recovery bars will be inserted here by JS -->
+                </div>
+                <table>
+                    <tr>
+                        <th>Metrik</th>
+                        <th>Wert</th>
+                        <th>Trend</th>
+                    </tr>
+                    <tr>
+                        <td>Whoop Recovery</td>
+                        <td id="recovery-percentage">75%</td>
+                        <td class="value-up" id="recovery-trend">+15%</td>
+                    </tr>
+                    <tr>
+                        <td>RHR</td>
+                        <td id="rhr-value">52 bpm</td>
+                        <td class="value-down" id="rhr-trend">-2 bpm</td>
+                    </tr>
+                    <tr>
+                        <td>HRV</td>
+                        <td id="hrv-value">68 ms</td>
+                        <td class="value-up" id="hrv-trend">+4 ms</td>
+                    </tr>
+                </table>
+                <p style="font-size: 14px; margin-top: 10px;"><strong>Empfehlung:</strong> Gute Recovery-Werte ermöglichen volle Intensität für PR-Versuche heute.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Beast Cycle Planung</h3>
+                <div class="hormone-info">
+                    <p><strong>Status:</strong> <span id="cycle-status">Vorbereitung</span></p>
+                    <p><strong>Start:</strong> <span id="cycle-start-date">21.03.2026</span></p>
+                    <p><strong>Dauer:</strong> <span id="cycle-duration">16 Wochen</span></p>
+                    <div class="injection-schedule">
+                        <div class="day-box" id="day-monday">Mo</div>
+                        <div class="day-box" id="day-tuesday">Di</div>
+                        <div class="day-box" id="day-wednesday">Mi</div>
+                        <div class="day-box" id="day-thursday">Do</div>
+                        <div class="day-box" id="day-friday">Fr</div>
+                        <div class="day-box" id="day-saturday">Sa</div>
+                        <div class="day-box" id="day-sunday">So</div>
+                    </div>
+                    <div class="injection-schedule">
+                        <div class="day-box active-day" id="inj-monday">Test E<br>Primo</div>
+                        <div class="day-box" id="inj-tuesday"></div>
+                        <div class="day-box active-day" id="inj-wednesday">Primo</div>
+                        <div class="day-box active-day" id="inj-thursday">Test E</div>
+                        <div class="day-box active-day" id="inj-friday">Primo</div>
+                        <div class="day-box" id="inj-saturday"></div>
+                        <div class="day-box" id="inj-sunday"></div>
+                    </div>
+                </div>
+                <p style="font-size: 14px; margin-top: 10px;"><strong>Bluttest geplant:</strong> <span id="bloodtest-window">15.04. - 20.04.2026</span> (Woche 4)</p>
+            </div>
+            
+            <div class="card">
+                <h3>Wichtige Termine</h3>
+                <div class="calendar-box">
+                    <div class="month-header">
+                        <span>◀ Januar</span>
+                        <span><strong>Februar 2026</strong></span>
+                        <span>März ▶</span>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day">Mo</div>
+                        <div class="calendar-day">Di</div>
+                        <div class="calendar-day">Mi</div>
+                        <div class="calendar-day">Do</div>
+                        <div class="calendar-day">Fr</div>
+                        <div class="calendar-day">Sa</div>
+                        <div class="calendar-day">So</div>
+                        
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div>
+                        <div class="calendar-day">7</div>
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                        
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day today">14</div>
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+                        
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day event">21</div>
+                        <div class="calendar-day">22</div>
+                        <div class="calendar-day">23</div>
+                        
+                        <div class="calendar-day">24</div>
+                        <div class="calendar-day">25</div>
+                        <div class="calendar-day">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day">28</div>
+                        <div class="calendar-day"></div>
+                        <div class="calendar-day"></div>
+                    </div>
+                </div>
+                <div style="padding: 10px; font-size: 14px;" id="event-list">
+                    <!-- Events will be inserted here by JS -->
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>PR-Ziele für Blast-Peak</h3>
+                <ul class="target-list" id="target-list">
+                    <!-- PR targets will be inserted here by JS -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
