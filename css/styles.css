@@ -355,6 +355,103 @@ th {
     color: #e74c3c;
 }
 
+/* Whoop Integration Styles */
+.whoop-card {
+    margin-top: 20px;
+}
+
+.whoop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.whoop-logo {
+    height: 24px;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-indicator.connected {
+    background-color: #27ae60;
+}
+
+.status-indicator.disconnected {
+    background-color: #e74c3c;
+}
+
+.connected-status, .disconnected-status {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.connect-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.connect-button:hover {
+    background-color: #2980b9;
+}
+
+.sync-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.sync-button:hover {
+    background-color: #27ae60;
+}
+
+.sync-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.disconnect-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.disconnect-button:hover {
+    background-color: #c0392b;
+}
+
+#last-sync-time {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+    text-align: right;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .dashboard-grid {
@@ -372,5 +469,14 @@ th {
     
     .muscle-item {
         width: 100%;
+    }
+    
+    .whoop-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .connected-status, .disconnected-status {
+        margin-top: 10px;
     }
 }

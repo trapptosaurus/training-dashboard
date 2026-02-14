@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERSONAL AI TRAINING OS - Dashboard</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADkElEQVR42sWXTWgTQRTHf7tJU9MvtdpasB56qCAIoicPinryJCgUvNiTaBHEi6CHInoRBL2IJ0E8KXgQRFCKN/FiRQ+iUERQsR+m2jZN0+xuZne8bDZpdtu0Tbc68JjN5u3M/72Z9978R1FVgUK+Y9Z3Fa0WVjTu3zf0XyGEcr/nzl/C9wNmjVuzOVfm8gWCQJnVbyjzqhyYuKRlJwLMwdWxVcOw1eOklvfZFQTKhFnvhkkdkEApUcK1xTWsW9NGS30NA6NjvHr3jUJeD3E5lsMpOHlBufOKyiRbqVacTCa5sHcTTbVVkaNEcGzigFt3X/Lu21j0mVK8f/0JoI8WclYuZ2VYeXQCx1WmjTk5Tm5qwlcFz1dWb95gfQAJkCBQxqdz7Lz2HC/nInFIxsLGVR088f0fxkx9xbVYSBzLB7oGRyNhcWPFxG37L31vdJtXN2bCxdR/AKDcfSNGkzX09lcXbmxf4KY1xmZw59Vn5sODMNg2YwBRsffuEKPj+RJIFhqBOoNKGNDOzfU0p2txPZl1yj5DYtPf1dPOvQOf8XzfQMqQ6VsBQA0AKXL22B68MILqaKQ2leL0wV14VtmtaEpjUzNdm1ZTb/AUC8eONgwVHMq1F2LUx4nDu/A8n+pU3Cgc9clo6miqUvFQTwJI+bYUf1MogGgCRW697MNx5ZglrG5wExWG4MnnhcZDZCjU2NzC3ctHDV9CtmK/EgDVAFCu9mR1Yp21FnYtgCUQKf7i5r4TZEZHQ/2JRdTU1YX/w6oS6yAE8Pn7KHFLHzQ1NjDkKa2trbTUN/D0zTCpZDxUWm3FKOw8+XB3m0k4WhMJ3NApb0dL3A7TdjQa0CbHXauhxkrQ3drE4PdfpOoSJGIWmZpEuP/7xH4Wl6qfPl+pCFoqimr5DaCq+HnP5Hw1W9S3xmLYll2ityjwIkq0JuPhvvbTQ5kpA8i/cMUoVPzAZFYVMYGJKe24PmIYhvQ9Kpqo2lI0s3JwwKc1ZeN5fhR5qRm/VJQRJdcPcIK8MfOZXsKwk7zrRrpwfZ/ejCm4fv5v8uEMhRYFVCwVuXzeKPcMCQn7rZEZc+DtXcBKVhYwqmrM+OTBx1o5S9LclV0CZ8pRMz+fK5MaOKYaVloRITAVc3bFyrj88dMnS0bhsmrCkhp0CyEWnPT7Cx/RLtmyNaZHAAAAAElFTkSuQmCC">
 </head>
 <body>
     <h1>PERSONAL AI TRAINING OS - Langzeit-Dashboard</h1>
@@ -100,7 +101,7 @@
                         <td class="value-up" id="hrv-trend">+4 ms</td>
                     </tr>
                 </table>
-                <p style="font-size: 14px; margin-top: 10px;"><strong>Empfehlung:</strong> Gute Recovery-Werte ermöglichen volle Intensität für PR-Versuche heute.</p>
+                <p style="font-size: 14px; margin-top: 10px;"><strong>Empfehlung:</strong> <span id="recovery-recommendation">Connect your Whoop for personalized training recommendations.</span></p>
             </div>
             
             <div class="card">
@@ -203,6 +204,26 @@
         </div>
     </div>
     
+    <!-- Whoop Integration Card -->
+    <div class="card whoop-card">
+        <div class="whoop-header">
+            <h3>Whoop Integration</h3>
+            <div id="whoop-status">
+                <!-- Connection status will be displayed here -->
+                <div class="disconnected-status">
+                    <span class="status-indicator disconnected"></span>
+                    <span>Not connected to Whoop</span>
+                </div>
+            </div>
+        </div>
+        
+        <button id="whoop-connect-button" class="connect-button">Connect to Whoop</button>
+        
+        <div id="last-sync-time"></div>
+    </div>
+    
     <script src="js/dashboard.js"></script>
+    <script src="js/whoop-api.js"></script>
+    <script src="js/recovery-integration.js"></script>
 </body>
 </html>

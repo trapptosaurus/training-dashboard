@@ -7,6 +7,7 @@ Ein interaktives Dashboard zur Visualisierung von Trainingsdaten, Fortschritten 
 - **Trainingsfortschritt & Zeitplan**: Visualisierung des Trainingsplans mit Phasen und Timeline
 - **Übungsfortschritte & Ziele**: Tracking von Leistungsdaten und Zielen für Kernübungen
 - **Recovery-Tracking**: Visualisierung von Whoop-Daten und Erholungsmetriken
+- **Whoop API Integration**: Automatische Synchronisierung von Recovery-Daten
 - **Cycle-Planung**: Übersicht über den Beast Cycle mit Injektionsplan und wichtigen Terminen
 - **Mobilfreundlich**: Responsive Design für die Nutzung auf verschiedenen Geräten
 
@@ -14,13 +15,16 @@ Ein interaktives Dashboard zur Visualisierung von Trainingsdaten, Fortschritten 
 
 ```
 /
-├── index.html           # Hauptseite des Dashboards
+├── index.html             # Hauptseite des Dashboards
+├── whoop-callback.html    # Callback-Seite für Whoop OAuth-Authentifizierung
 ├── css/
-│   └── styles.css       # Styling für das Dashboard
+│   └── styles.css         # Styling für das Dashboard
 ├── js/
-│   └── dashboard.js     # JavaScript für Datenvisualisierung und Interaktion
+│   ├── dashboard.js       # JavaScript für Datenvisualisierung und Interaktion
+│   ├── whoop-api.js       # Whoop API Integration und Datenverarbeitung
+│   └── recovery-integration.js # Verknüpfung von Whoop-Daten mit Trainingsempfehlungen
 └── data/
-    └── user_data.json   # Benutzerdaten für das Dashboard (separiert für einfache Updates)
+    └── user_data.json     # Benutzerdaten für das Dashboard (separiert für einfache Updates)
 ```
 
 ## Nutzung
