@@ -1,0 +1,104 @@
+{
+  "measurements": [
+    {
+      "date": "2026-01-29",
+      "weight": 99,
+      "bodyFat": null,
+      "measurements": {
+        "neck": {
+          "inch": 17.01,
+          "cm": 43.21
+        },
+        "shoulders": {
+          "inch": 49.75,
+          "cm": 126.37
+        },
+        "chest": {
+          "inch": 41.39,
+          "cm": 105.13
+        },
+        "waist": {
+          "inch": 38.42,
+          "cm": 97.59
+        },
+        "abdomen": {
+          "inch": 40.32,
+          "cm": 102.41
+        },
+        "hips": {
+          "inch": 41.95,
+          "cm": 106.55
+        },
+        "leftArm": {
+          "inch": 15.55,
+          "cm": 39.50
+        },
+        "rightArm": {
+          "inch": 15.30,
+          "cm": 38.86
+        },
+        "leftThigh": {
+          "inch": 19.63,
+          "cm": 49.86
+        },
+        "rightThigh": {
+          "inch": 20.30,
+          "cm": 51.56
+        },
+        "leftCalf": {
+          "inch": 15.63,
+          "cm": 39.70
+        },
+        "rightCalf": {
+          "inch": 15.63,
+          "cm": 39.70
+        }
+      },
+      "ratios": {
+        "waistToHip": 0.92
+      },
+      "notes": "Monatliche Basismessung vor dem Start des Beast Cycle"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-01-29",
+      "highlights": {
+        "largest": [
+          {
+            "measurement": "shoulders",
+            "value": 126.37,
+            "unit": "cm"
+          },
+          {
+            "measurement": "hips",
+            "value": 106.55,
+            "unit": "cm"
+          },
+          {
+            "measurement": "chest",
+            "value": 105.13,
+            "unit": "cm"
+          }
+        ],
+        "smallest": [
+          {
+            "measurement": "rightArm",
+            "value": 38.86,
+            "unit": "cm"
+          },
+          {
+            "measurement": "leftArm",
+            "value": 39.50,
+            "unit": "cm"
+          },
+          {
+            "measurement": "leftCalf",
+            "value": 39.70,
+            "unit": "cm"
+          }
+        ]
+      }
+    }
+  ]
+}
